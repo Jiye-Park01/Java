@@ -1,0 +1,43 @@
+package week03;
+
+import java.util.Scanner;
+
+public class Rectangle {
+	int x1,y1,x2,y2;
+	
+	Rectangle(int x1, int y1, int x2, int y2) {	//Rectangle 클래스 생성자
+		this.x1 = x1;
+		this.x2 = x2;
+		this.y1 = y1;
+		this.y2 = y2;
+	}
+	
+	Point lt = new Point(x1, y1);
+	Point rb = new Point(x2, y2);
+	
+	Rectangle(Point lt, Point rb){
+		this.lt = lt;
+		this.rb = rb;
+	}
+		
+	
+	int getWidth() {		//폭 반환
+		return rb.getX()-lt.getX();
+	}
+	
+	int getHeight() {		//높이 반환
+		return (rb.getY()-lt.getY());
+	}
+	
+	int getPerimeter() {		//둘레 반환
+		return 2*(rb.getX()-lt.getX()+rb.getY()-lt.getY());
+	}
+	
+	int getArea() {		//넓이 반환
+		return (rb.getX()-lt.getX())*(rb.getY()-lt.getY());
+	}
+	
+	void show() {
+		System.out.println("[직사각형 " + getWidth() + "X" + getHeight() + ": (" + lt.getX() + ", " + lt.getY() + "), (" +  rb.getX() + ", " + rb.getY() + ")]");
+	}
+}

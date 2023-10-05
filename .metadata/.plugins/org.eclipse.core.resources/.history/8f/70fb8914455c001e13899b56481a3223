@@ -1,0 +1,23 @@
+package week03;
+
+public class Point {
+	private int x;
+	private int y;
+	
+	public Point(int x, int y) {	//Point 객체 생성시 x, y값 초기화
+		this.x = x;
+		this.y = y;
+	}
+	
+	int getX() {	//x값 반환
+		return x;
+	}
+	int getY() {	//y값 반환
+		return y;
+	}
+	
+	void show() {		//"(x, y)"형식으로 출력
+		System.out.println("\"(" + x + ", " + y + "\")");
+	}
+}
+

@@ -1,0 +1,36 @@
+package week03;
+
+import java.util.Scanner;
+
+public class Rectangle {
+	public Re
+	
+	int x1,y1,x2,y2;
+		
+	Point lt = new Point(x1, y1);
+	Point rb = new Point(x2, y2);
+		
+	
+	int getWidth(Point lt, Point rb) {		//폭 반환
+		return rb.getX()-lt.getX();
+	}
+	
+	int getHeight(Point lt, Point rb) {		//높이 반환
+		return (rb.getY()-lt.getY());
+	}
+	
+	int getPerimeter(Point lt, Point rb) {		//둘레 반환
+		return 2*(rb.getX()-lt.getX()+rb.getY()-lt.getY());
+	}
+	
+	int getArea(Point lt, Point rb) {		//넓이 반환
+		return (rb.getX()-lt.getX())*(rb.getY()-lt.getY());
+	}
+	
+	void show(Point lt, Point rb) {
+		System.out.println("폭: " + getWidth(lt, rb));
+		System.out.println("높이: " + getHeight(lt, rb));
+		System.out.println("둘레: " + getPerimeter(lt, rb));
+		System.out.println("넓이: " + getArea(lt, rb));
+	}
+}

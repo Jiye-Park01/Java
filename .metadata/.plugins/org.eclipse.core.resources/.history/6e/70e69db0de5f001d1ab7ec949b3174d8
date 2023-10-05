@@ -1,0 +1,21 @@
+package exam_1;
+
+import javax.swing.JFrame;
+
+public class RegMember extends JFrame{
+	public RegMember() {
+		super("사원등록");
+		
+		this.setBounds(700, 100, 500, 600);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		
+	}
+	public static void main(String[] args) {
+		new RegMember();
+	}
+}
+
+
