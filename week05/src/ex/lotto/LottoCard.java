@@ -4,7 +4,7 @@ public class LottoCard {
     int mNum;
     Lotto[] mLottos;
 
-    public LottoCard(int mNum) {
+    public LottoCard(int mNum) {	//생성자
         if (mNum < 1 || mNum > 5) {
             System.out.println("구매 오류! \n구매할 수 있는 복권의 개수는 1개 ~ 5개입니다.");
             return;
@@ -17,7 +17,6 @@ public class LottoCard {
         if (idx < 1 || idx > mNum)
             return false;
         mLottos[idx - 1] = new Lotto();
-        mLottos[idx - 1].generate();
         return true;
     }
 
@@ -75,5 +74,12 @@ public class LottoCard {
             }
         }
     }
+    
+    
+//    public static void main(String[] args) {
+//		int mNum[] = {1,2,3,4,5,6};
+//		Lotto lotto = new Lotto(mNum);
+//		lotto.show();
+//	}
 }
 
