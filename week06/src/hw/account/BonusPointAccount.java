@@ -15,4 +15,5 @@ public class BonusPointAccount extends Account{	//포인트 적립 계좌
 	void check() {	//잔액조회(출력)하기 + 포인트도 표시
 		System.out.println("잔액: " + balance + "\n포인트 잔액: " + bonusPoint);
 	}
+
 }

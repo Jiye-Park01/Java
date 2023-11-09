@@ -15,20 +15,24 @@ public class Account {	//기본
 		this.balance = balance;
 	}
 	
-	void deposit(int amount) {	//예금하기
+	public Account(String accountNo, String name) {
+		this(accountNo, name, 0);
+	}
+	
+	public void deposit(int amount) {	//예금하기
 		this.balance += amount;
 	}
 	
-	int withdraw(int amount) {	//인출하기
+	public int withdraw(int amount) {	//인출하기
 		if(amount <= balance) {
 			balance -= amount;	//인출전 잔액 - 인출금액 = 인출후 잔액
 			return amount;
 		}
-		else
-			return 0;
+		System.out.println("인출불가: 잔액이 부족합니다.");
+		return 0;
 	}
 	
-	void check() {	//잔액조회(출력)하기
-		System.out.println("잔액: " + balance);
+	public void check() {	//잔액조회(출력)하기
+		System.out.println("잔액조회: " + name + "(" + accountNo + "): " + balance + "원\n");
 	}
 }
